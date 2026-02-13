@@ -15,7 +15,7 @@ The framework runs **multiple AI agents** in sequence:
 ## ✅ Requirements (Install Before Running)
 
 ### 1) Install Node.js
-Recommended: **Node.js 18+ / 20+**
+Recommended: **Node.js 20**
 Check:
 ```bash
 node -v
