@@ -1,0 +1,10 @@
+Execution Summary
+-----------------
+Retry Attempts Used: 1
+Final Status: PASSED_AFTER_RETRY
+
+Failure Analysis:
+Failure Type: Locator Issue
+Reason: Playwright's getByText locator failed due to strict mode violation, matching multiple elements with the same text.
+Retry: NO
+FixTest: YES

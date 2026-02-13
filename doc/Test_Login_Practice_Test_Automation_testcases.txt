@@ -1,0 +1,87 @@
+TestCase ID: TC001
+Scenario: Successful user login with valid credentials.
+Type: Positive
+Test Data: Username: student, Password: Password123
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Enter "student" into the 'username' input field.
+3. Enter "Password123" into the 'password' input field.
+4. Click the "Submit" button.
+
+Expected Result: The user is successfully logged in and redirected to a welcome page or dashboard, with a success message displayed.
+
+---
+
+TestCase ID: TC002
+Scenario: Attempt login with an incorrect username and a correct password.
+Type: Negative
+Test Data: Username: wrongstudent, Password: Password123
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Enter "wrongstudent" into the 'username' input field.
+3. Enter "Password123" into the 'password' input field.
+4. Click the "Submit" button.
+
+Expected Result: An error message indicating invalid credentials (e.g., "Your username is invalid!") is displayed on the login page. The user remains on the login page.
+
+---
+
+TestCase ID: TC003
+Scenario: Attempt login with a correct username and an incorrect password.
+Type: Negative
+Test Data: Username: student, Password: WrongPassword
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Enter "student" into the 'username' input field.
+3. Enter "WrongPassword" into the 'password' input field.
+4. Click the "Submit" button.
+
+Expected Result: An error message indicating invalid credentials (e.g., "Your username is invalid!") is displayed on the login page. The user remains on the login page.
+
+---
+
+TestCase ID: TC004
+Scenario: Attempt login with both username and password fields left empty.
+Type: Negative
+Test Data: Username: (empty), Password: (empty)
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Leave the 'username' input field empty.
+3. Leave the 'password' input field empty.
+4. Click the "Submit" button.
+
+Expected Result: An error message indicating missing credentials (e.g., "Your username is invalid!") is displayed on the login page. The user remains on the login page.
+
+---
+
+TestCase ID: TC005
+Scenario: Attempt login with username field containing only whitespace characters and a valid password.
+Type: Edge
+Test Data: Username: "   ", Password: Password123
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Enter "   " (three space characters) into the 'username' input field.
+3. Enter "Password123" into the 'password' input field.
+4. Click the "Submit" button.
+
+Expected Result: An error message indicating invalid credentials (e.g., "Your username is invalid!") is displayed. The user remains on the login page, as whitespace-only usernames should typically not be considered valid.
+
+---
+
+TestCase ID: TC006
+Scenario: Attempt login with password field containing only whitespace characters and a valid username.
+Type: Edge
+Test Data: Username: student, Password: "   "
+
+Steps:
+1. Navigate to the login page at https://practicetestautomation.com/practice-test-login/.
+2. Enter "student" into the 'username' input field.
+3. Enter "   " (three space characters) into the 'password' input field.
+4. Click the "Submit" button.
+
+Expected Result: An error message indicating invalid credentials (e.g., "Your username is invalid!") is displayed. The user remains on the login page, as whitespace-only passwords should typically not be considered valid.
